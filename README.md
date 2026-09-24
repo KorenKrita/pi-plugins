@@ -108,3 +108,12 @@ pi-plugins/
 ```
 
 本仓库里的源码是 2026-09-25 从本机 `~/.pi/agent/extensions`、`~/Coding` 下的项目、配置仓库的 Git 历史、`~/.agents/backups` 备份和会话记录中收集的快照。每个插件 README 的「来源」和「历史」写了具体出处。
+
+## 验证记录
+
+2026-09-25，Pi 0.87.1，在隔离的 `PI_CODING_AGENT_DIR` 中：
+
+- 本仓库 21 个带源码的包逐个用 `pi -p -e <目录>` 加载，模型都正常回复，没有加载错误。这只覆盖 print 模式，TUI 交互功能未测。archived 插件只验证了能加载，功能未验证。
+- 一行安装命令①②实测可用，重复执行会走 `git pull`；`pi install git:github.com/KorenKrita/{pi-frame,pi-error-auto,pistatusline}` 实测安装成功。
+- 自带测试全部通过：command-blacklist 8 个、fullscreen-auto-jump 59 个、pi-note-context 83 个、pi-then-run 23 个。
+- 公开前做了密钥和私有地址扫描：crew-lite 里的私有 Memini 地址已换成占位默认值。
