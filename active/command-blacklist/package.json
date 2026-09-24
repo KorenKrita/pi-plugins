@@ -1,0 +1,17 @@
+{
+  "name": "command-blacklist",
+  "private": true,
+  "type": "module",
+  "description": "从 / 命令补全候选中隐藏不想看到的斜杠命令",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

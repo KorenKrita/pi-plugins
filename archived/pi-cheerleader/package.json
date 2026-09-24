@@ -1,0 +1,17 @@
+{
+  "name": "pi-cheerleader",
+  "private": true,
+  "type": "module",
+  "description": "用廉价模型检测主 agent 的气馁信号，并注入简短鼓励",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "00-env",
+  "private": true,
+  "type": "module",
+  "description": "加载扩展时把 ~/.pi/agent/env.json 注入 process.env",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

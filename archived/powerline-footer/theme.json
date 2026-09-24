@@ -1,0 +1,23 @@
+{
+  "colors": {
+    "model": "#ff4fd8",
+    "time": "#f59e0b",
+    "path": "#00e5ff",
+    "gitDirty": "#ffb000",
+    "gitClean": "#00e676",
+    "gitUnstaged": "#ff9f1c",
+    "gitStaged": "#00e676",
+    "gitUntracked": "#3a86ff",
+    "thinking": "#b388ff",
+    "thinkingMinimal": "#c77dff",
+    "thinkingLow": "#3a86ff",
+    "thinkingMedium": "#00d4ff",
+    "context": "#4cc9f0",
+    "contextWarn": "#ffd60a",
+    "contextError": "#ff3b6b",
+    "cost": "#ff4d8d",
+    "tokens": "#39ff88",
+    "separator": "#8b5cf6",
+    "border": "#00b8d9"
+  }
+}

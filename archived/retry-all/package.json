@@ -1,0 +1,17 @@
+{
+  "name": "retry-all",
+  "private": true,
+  "type": "module",
+  "description": "把不可重试的 API 错误改标为可重试，交给 Pi 原生重试",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

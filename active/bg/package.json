@@ -1,0 +1,17 @@
+{
+  "name": "bg",
+  "private": true,
+  "type": "module",
+  "description": "接管 bash：强制写明超时，支持后台任务与超时转后台",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

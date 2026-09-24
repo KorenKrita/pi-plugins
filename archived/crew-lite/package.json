@@ -1,0 +1,17 @@
+{
+  "name": "crew-lite",
+  "private": true,
+  "type": "module",
+  "description": "将 acm_travel 交接写成 Memini 索引，并做 fold 提醒与压缩事故记录",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "fixed-input",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "0.80.6",
+    "@earendil-works/pi-tui": "0.80.6",
+    "@types/bun": "latest",
+    "typescript": "5.9.3"
+  },
+  "description": "把输入框和页脚固定在终端底部，对话记录独立滚动"
+}

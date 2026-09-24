@@ -1,0 +1,17 @@
+{
+  "name": "force-gpt-priority",
+  "private": true,
+  "type": "module",
+  "description": "给 GPT 模型的请求强制加上 service_tier: \"priority\"",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

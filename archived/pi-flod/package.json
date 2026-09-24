@@ -1,0 +1,17 @@
+{
+  "name": "pi-flod",
+  "private": true,
+  "type": "module",
+  "description": "折叠整轮对话、单行化工具调用、分步摘要思考过程",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "advisor",
+  "private": true,
+  "type": "module",
+  "description": "让执行模型随时向更强模型征询意见的 advisor 工具",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

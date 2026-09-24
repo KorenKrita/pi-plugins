@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Fixed Input Implementation Notes</title>
+</head>
+<body>
+  <h1>Fixed Input Implementation Notes</h1>
+  <section>
+    <h2>Final-answer auto-jump</h2>
+    <p><strong>Provenance:</strong> user-decided</p>
+    <ul>
+      <li>After a turn settles, automatic navigation targets the dynamically rendered text child of the final assistant component, not message start, thinking, or tool calls.</li>
+      <li>The jump is considered only when that final text range exceeds the visible transcript viewport, and the range is recalculated after resize/reflow.</li>
+      <li>Any user scroll intent during the turn cancels automatic navigation for that turn, even when the viewport cannot move or later returns to the bottom.</li>
+      <li>When actual user scrolling leaves the bottom, the compositor preserves the chosen viewport start across transcript growth and temporary shrinkage; losing scroll range must not silently resume bottom-following.</li>
+      <li>Submitting a new prompt programmatically returns the transcript to the bottom before tracking the new turn; this system navigation does not count as user scroll intent.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Compositor hardening</h2>
+    <p><strong>Provenance:</strong> agent-resolved</p>
+    <ul>
+      <li>User viewport preservation uses a printable-content signature, neighboring-line context, and an independent logical fallback; temporary clamping must not overwrite the durable anchor, and repeated lines must be disambiguated by context.</li>
+      <li>Only visible capturing overlays suspend compositor input and rendering behavior.</li>
+      <li>Unhandled SGR mouse packets and right-clicks without a selection pass through to Pi. Copied selections remove complete or unterminated terminal control strings and disallowed C0/C1 controls.</li>
+      <li>Selection completion performs one clipboard write; asynchronous clipboard failures are caught and surfaced through Pi UI.</li>
+      <li>Terminal/TUI monkey patches, hidden renderers, and the editor factory are restored only when the installed wrapper is still owned by this extension.</li>
+      <li>The original own <code>rows</code> descriptor is distinguished from an inherited descriptor; data descriptors are read directly to avoid recursive access through the installed getter.</li>
+      <li>Kitty keyboard mode uses push/pop semantics; an already-active modifyOtherKeys mode is explicitly re-enabled after leaving the alternate screen.</li>
+      <li>The private five-slot Pi layout around the editor is validated before any component is hidden; a real Pi 0.80.6 loader lifecycle smoke test guards this seam.</li>
+      <li>A one-row terminal remains one row and bypasses split painting rather than drawing into a fabricated second row.</li>
+    </ul>
+  </section>
+</body>
+</html>

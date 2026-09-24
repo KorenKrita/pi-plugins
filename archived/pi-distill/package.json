@@ -1,0 +1,17 @@
+{
+  "name": "pi-distill",
+  "private": true,
+  "type": "module",
+  "description": "用独立模型提炼冗长工具输出，原文另存到临时文件",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Universal Tidy 实现说明</title>
+</head>
+<body>
+  <h1>Universal Tidy 实现说明</h1>
+  <ul>
+    <li><strong>agent-resolved：</strong>采用运行时 patch <code>ToolExecutionComponent</code>，而不是重新注册任何工具，以保留其他扩展的 schema、执行逻辑和加载关系。</li>
+    <li><strong>agent-resolved：</strong>视觉语言参考上游 <code>pi-tidy-tools</code> 的两行布局、轻量 gutter、状态符号、工具分类图标和 tail-preserving 截断，但不复制其工具重注册与 reasoning schema 注入。</li>
+    <li><strong>agent-resolved：</strong>折叠状态统一使用通用摘要；展开状态保留折叠摘要并委托原工具的 <code>renderResult</code>，避免丢失 diff、Markdown 和第三方专用展示。</li>
+    <li><strong>agent-resolved：</strong>不向工具 schema 注入 <code>reasoning</code>，因为这会改变公共工具契约并降低兼容性；工具已有 reasoning 时会直接用于标题。</li>
+    <li><strong>agent-resolved：</strong>针对 glass 主题的 <code>muted=#00ff00</code>，目标文本改用 <code>toolOutput</code>，状态色和工具类别色使用上游同类 ANSI 语义，避免整行荧光绿抢占层级。</li>
+    <li><strong>agent-resolved：</strong>紧凑摘要剥离 Hashline 行锚点，优先使用 <code>totalResults</code>、<code>count</code> 等结构化 details；长单行成功消息降级为 <code>done</code>。</li>
+    <li><strong>agent-resolved：</strong>通过已加载 Pi 包入口推导内部模块路径，不硬编码用户安装目录；内部方法形状不匹配时安全降级为 no-op。</li>
+    <li><strong>agent-resolved：</strong>建立真实 <code>ToolExecutionComponent</code> + glass truecolor 视觉预览，覆盖 8 种场景和 80/120/160 三种宽度，共 24 帧。</li>
+    <li><strong>open：</strong>这是针对 Pi 0.80.6 的内部 API 补丁，Pi 升级后需重新运行 unit、visual、type 和 smoke checks。</li>
+  </ul>
+</body>
+</html>

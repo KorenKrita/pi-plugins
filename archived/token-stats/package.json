@@ -1,0 +1,17 @@
+{
+  "name": "token-stats",
+  "private": true,
+  "type": "module",
+  "description": "每轮结束后在会话中追加一行 token、TTFT、TPS、缓存与费用统计",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

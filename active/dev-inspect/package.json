@@ -1,0 +1,17 @@
+{
+  "name": "dev-inspect",
+  "private": true,
+  "type": "module",
+  "description": "查看系统提示词、逐次调用的 token 用量和上下文构成的调试命令",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

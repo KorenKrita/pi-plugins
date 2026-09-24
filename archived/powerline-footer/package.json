@@ -1,0 +1,11 @@
+{
+  "name": "powerline-footer",
+  "private": true,
+  "type": "module",
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "description": "固定底部输入框，配 powerline 状态栏、聊天滚动和中文 Working Vibes"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "session-cache-footer",
+  "private": true,
+  "type": "module",
+  "description": "自定义底栏，并在对话中插入 token、缓存、耗时与成本统计块",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

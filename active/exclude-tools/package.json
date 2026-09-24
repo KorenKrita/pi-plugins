@@ -1,0 +1,17 @@
+{
+  "name": "exclude-tools",
+  "private": true,
+  "type": "module",
+  "description": "让 settings.json 里的 excludeTools 真正生效，禁用指定工具",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

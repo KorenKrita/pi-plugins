@@ -1,0 +1,17 @@
+{
+  "name": "force-claude-fast",
+  "private": true,
+  "type": "module",
+  "description": "强制所有 Claude 模型请求使用 AWS Bedrock Priority 服务层级",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}
